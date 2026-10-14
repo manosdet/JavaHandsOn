@@ -20,6 +20,7 @@ public class ShiftZeroToLeft {
 		
 		for(int i =0; i<count; i++) {
 			arr[i] = 0;
+			System.out.println(Arrays.toString(arr));
 		}
 		
 		for(int i= count ; i<arr.length;i++) {
@@ -28,6 +29,6 @@ public class ShiftZeroToLeft {
 		
 		System.out.println(Arrays.toString(arr));
 		
-	}
+ 	}
 
 }
