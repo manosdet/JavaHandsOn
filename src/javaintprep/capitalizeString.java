@@ -12,7 +12,9 @@ public class capitalizeString {
 		String result = "";
 		for(String w : words) {
 			String first = w.substring(0, 1).toUpperCase();
+			System.out.println(first);
 			String restString = w.substring(1);
+			System.out.println(restString);
 			result = result + first + restString + " ";
 		}
 		
