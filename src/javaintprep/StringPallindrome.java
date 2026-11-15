@@ -5,7 +5,9 @@ public static void main (String [] args) {
 	
 	String str = "nooloon";
 	
-	isPalindromeString(str);
+	//isPalindromeString(str);
+	System.out.println(isStringPalindrome(str));
+	System.out.println(isStringPalindromeO(str));
 }
 
 static void isPalindromeString(String str){ 
@@ -26,4 +28,42 @@ static void isPalindromeString(String str){
 		System.out.println(str +" is not pallindrome");
 	}
 }
+
+
+public static boolean isStringPalindrome(String str) {  
+	
+	char[] arr = str.toCharArray();
+	boolean falg = true;
+	int left = 0;
+	int right = arr.length-1;
+	
+	while(left < right) {
+		
+		if(arr[left] != arr[right]){
+			return falg = false;
+			
+		}else {
+			left++;
+			right--;
+		}
+		
+	}
+	return falg;
+}
+
+//optimize with time O(1) 
+public static boolean isStringPalindromeO(String str) {
+    int left = 0;
+    int right = str.length() - 1;
+
+    while (left < right) {
+        if (str.charAt(left) != str.charAt(right)) {
+            return false;
+        }
+        left++;
+        right--;
+    }
+    return true;
+}
+
 }
